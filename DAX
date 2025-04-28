@@ -1,0 +1,77 @@
+  Total Stock Quantity = SUM('Inventory Management'[Stock_Quantity])
+
+  Total Products Needing Action = 
+  CALCULATE(
+      COUNTROWS('Inventory Management'),
+      'Inventory Management'[Restock_Status] IN { "Order Now", "Plan to Order" }
+)
+
+  Total Product = COUNTA('Inventory Management'[Product_ID])
+
+Total Inventory Value = SUMX(
+    'Inventory Management', 
+    'Inventory Management'[Stock_Quantity] * 'Inventory Management'[Unit_Price]
+)
+
+  Stock Status = COUNTA('Inventory Management'[Status])
+
+  Products Comfortably Above Reorder Point = 
+CALCULATE(
+    COUNTROWS('Inventory Management'),
+    'Inventory Management'[Stock_Quantity] > 'Inventory Management'[Reorder_Point]
+) 
+- 
+CALCULATE(
+    COUNTROWS('Inventory Management'),
+    'Inventory Management'[Stock_Quantity] <= 
+        'Inventory Management'[Reorder_Point] * 1.25 &&
+    'Inventory Management'[Stock_Quantity] > 
+        'Inventory Management'[Reorder_Point]
+)
+
+  Products Close to Reorder Point = 
+CALCULATE(
+    COUNTROWS('Inventory Management'),
+    'Inventory Management'[Stock_Quantity] <=
+        'Inventory Management'[Reorder_Point] * 1.25 &&
+    'Inventory Management'[Stock_Quantity] >=
+        'Inventory Management'[Reorder_Point]
+)
+
+  Products Below Reorder Point = 
+CALCULATE(
+    COUNTROWS('Inventory Management'),
+    'Inventory Management'[Stock_Quantity] < 'Inventory Management'[Reorder_Point]
+)
+
+  Products Above Reorder Point = 
+CALCULATE(
+    COUNTROWS('Inventory Management'),
+    'Inventory Management'[Stock_Quantity] >= 'Inventory Management'[Reorder_Point]
+)
+
+  Out of Stock Rate = 
+DIVIDE(
+    CALCULATE(
+        COUNTROWS('Inventory Management'),
+        'Inventory Management'[Status] = "Out of Stock"
+    ),
+    COUNTROWS('Inventory Management'),
+    0
+)
+
+  Average Price = 
+AVERAGE('Inventory Management'[Unit_Price])
+
+  Average Lead Time (Days) = 
+AVERAGE('Inventory Management'[Lead_Time_Days])
+
+  Above Reorder Point Rate = 
+DIVIDE(
+    CALCULATE(
+        COUNTROWS('Inventory Management'),
+        'Inventory Management'[Stock_Quantity] > 'Inventory Management'[Reorder_Point]
+    ),
+    COUNTROWS('Inventory Management'),
+    0
+)
