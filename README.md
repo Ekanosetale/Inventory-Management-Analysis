@@ -77,17 +77,27 @@ D. Warehouse & Geographic Insights
 
 • Which country has the most stocked items? What are the top three countries by stock quantity across product categories?
 
-1. Overall Inventory Health 
+1. Overall Inventory Health
+   
+ ![](ERD.png)
 
 The company maintains a substantial inventory valued at $1.253 billion across over 5,000 products. Approximately 94% of products are fully in stock, reflecting healthy stock availability. However, 6% are either out of stock or close to depletion, posing a risk to continuity of sales and customer satisfaction. An average lead time of 15 days underlines the need for proactive replenishment management. The inventory value concentration among a few categories also highlights potential vulnerability if market demand shifts suddenly.
 ________________________________________
 2. Stock Risk & Product Performance
+   ![](ERD.png)
+   
 Categories like Books, Home & Garden, and Office Supplies face elevated stockout risks. Some products have zero inventory and value, suggesting obsolescence. Conversely, high-value products within Books and Office Supplies represent major investments, making their stock management critical to profitability. Inactive SKUs still occupying database and warehouse space generate hidden carrying costs including storage, administrative tracking, and system overhead.
 ________________________________________
 3. Inventory Trends Over Time
+
+   ![](ERD.png)
+   
 The inventory trend shows a sharp decline in 2024, followed by a major spike in 2025 and a slight correction in 2026. This volatility suggests reactionary planning, where restocking was delayed until inventory crisis points, leading to bulk, potentially costly replenishment later. Such trends increase risks of both stockouts and excess inventory, tying up working capital unnecessarily.
+
 ________________________________________
 4. Supplier & Country Dependency
+   ![](ERD.png)
+   
 The company relies heavily on suppliers from Italy, France, the United Kingdom, and Belgium. However, lead times vary significantly (from 1 to 29 days), which affects replenishment reliability. Concentrated supplier dependency also introduces supply chain vulnerability. Heavy concentration of suppliers and long lead times magnify vulnerability during events like port strikes, transportation bottlenecks, or geopolitical instability.
 ________________________________________
 5. Warehouse & Stock Distribution
