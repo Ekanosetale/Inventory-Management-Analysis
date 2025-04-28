@@ -84,7 +84,7 @@ D. Warehouse & Geographic Insights
 The company maintains a substantial inventory valued at $1.253 billion across over 5,000 products. Approximately 94% of products are fully in stock, reflecting healthy stock availability. However, 6% are either out of stock or close to depletion, posing a risk to continuity of sales and customer satisfaction. An average lead time of 15 days underlines the need for proactive replenishment management. The inventory value concentration among a few categories also highlights potential vulnerability if market demand shifts suddenly.
 ________________________________________
 2. Stock Risk & Product Performance
-   ![](ERD.png)
+   ![](Inventory Analysis 1.jpg)
    
 Categories like Books, Home & Garden, and Office Supplies face elevated stockout risks. Some products have zero inventory and value, suggesting obsolescence. Conversely, high-value products within Books and Office Supplies represent major investments, making their stock management critical to profitability. Inactive SKUs still occupying database and warehouse space generate hidden carrying costs including storage, administrative tracking, and system overhead.
 ________________________________________
