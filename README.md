@@ -2,7 +2,7 @@
 
 ## About the Project
 ________________________________________
-Efficient inventory management is crucial for balancing supply and demand while minimizing costs. This challenge explores key aspects such as stock levels, supplier performance, warehouse utilization, and reorder strategies. By analyzing the provided dataset, this project aims to identify trends, optimize restocking decisions, and assess cost efficiency. The goal is to uncover actionable insights that enhance inventory operations and decision-making. Statistical techniques, visualization tools, and storytelling approaches are leveraged to support findings. Ultimately, the challenge is to optimize inventory performance and improve supply chain efficiency. Let's dive 
+Efficient inventory management is crucial for balancing supply and demand while minimizing costs. This project explores key aspects such as stock levels, supplier performance, warehouse utilization, and reorder strategies. By analyzing the provided dataset, this project aims to identify trends, optimize restocking decisions, and assess cost efficiency. The goal is to uncover actionable insights that enhance inventory operations and decision-making. Statistical techniques, visualization tools, and storytelling approaches are leveraged to support findings. Ultimately, the challenge is to optimize inventory performance and improve supply chain efficiency. Let's dive 
 in and explore the data!
 
 ## About the Dataset
